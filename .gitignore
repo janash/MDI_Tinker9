@@ -127,3 +127,23 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Emacs temporary files
+*~
+
+# SSH keys
+mdi_key
+mdi_key.pub
+
+# Report work directory
+.work/
+
+# MDI Mechanic work directory
+.mdimechanic/.temp
+docker/.temp
+
+# Build directory
+/build
+
+# Source directory
+/source
