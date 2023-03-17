@@ -1,13 +1,24 @@
-code_name: 'UNKNOWN'
+code_name: 'Tinker 9'
 docker:
-  image_name: 'mdiengine'
+  image_name: 'mdi/tinker9'
+  gpu:
+    type: 'nvidia'
 
   build_image:
-    - echo "Insert commands to build the environment for the engine here"
-    - echo "This will often include using apt-get or pip to install dependencies"
+    - echo "Build image step"
 
   build_engine:
-    - echo "Insert commands to build your engine code here"
+    - |
+      if [ ! -d "/repo/build/tinker9" ]; then
+        git clone https://github.com/TinkerTools/tinker9.git /repo/build/tinker9
+      fi
+    - cd /repo/build/tinker9
+    - rm -rf build
+    - mkdir -p build
+    - cd build
+    - FC=gfortran compute_capability=86 gpu_lang=CUDA cmake ..
+    - make
+    - make test
 
   validate_engine:
     - echo "Insert code that will confirm that your code has been built successfully"
