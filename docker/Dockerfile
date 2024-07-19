@@ -4,9 +4,6 @@
 
 FROM nvidia/cuda:12.1.0-devel-ubuntu18.04
 
-# copy the build script
-COPY .temp/build_image.sh .
-
 RUN apt-get update -y && \
     apt-get install -y --no-install-recommends \
         wget \
@@ -26,8 +23,11 @@ RUN apt-get remove --purge --auto-remove cmake -y && \
     rm /etc/apt/trusted.gpg.d/kitware.gpg && \
     apt-get update -y && \
     apt-get install -y --no-install-recommends \
-        cmake && \
+        cmake python3-pip && \
     rm -rf /tmp/* /var/tmp/* /var/lib/apt/lists/*
+
+# copy the build script
+COPY .temp/build_image.sh .
 
 # run the build script
 RUN bash build_image.sh

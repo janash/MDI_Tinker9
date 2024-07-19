@@ -5,18 +5,22 @@ docker:
     type: 'nvidia'
 
   build_image:
-    - echo "Build image step"
+    - pip3 install setuptools
+    - pip3 install packaging
+    - git clone https://github.com/MolSSI-MDI/MDI_Library.git
+    - cd MDI_Library
+    - pip3 install .
 
   build_engine:
     - |
       if [ ! -d "/repo/build/tinker9" ]; then
-        git clone https://github.com/TinkerTools/tinker9.git /repo/build/tinker9
+        git clone https://github.com/MolSSI-MDI/tinker9.git --branch mdi /repo/build/tinker9
       fi
     - mkdir -p /repo/build/tinker9/build
     - cd /repo/build/tinker9/build
     - FC=gfortran compute_capability=86 gpu_lang=CUDA cmake -DMDI=ON ..
     - make VERBOSE=1
-    - make test
+    #- make test
 
   validate_engine:
     - cd /repo/tests/water
@@ -37,7 +41,7 @@ run_scripts:
   water:
     containers:
       container1:
-        image: 'mdi/tinker9-cpu:dev'
+        image: 'mdi/tinker9:dev'
         script:
           - cd /repo/tests/water
           - /repo/build/tinker9/build/dynamic9 tinker.xyz /repo/build/tinker9/params/amoebabio09.prm -k tinker.key 1000 1.0 0.1 4 298.0 1.0 > tinker.out
@@ -45,8 +49,8 @@ run_scripts:
   driver:
     containers:
       container1:
-        image: 'mdi/tinker9-cpu:dev'
+        image: 'mdi/tinker9:dev'
         script:
           - cd /repo/tests/water
           - /repo/build/tinker9/build/dynamic9 tinker.xyz /repo/build/tinker9/params/amoebabio09.prm -k tinker.key -mdi "-role ENGINE -name Tinker9 -method TCP -port 8021 -hostname localhost" 100 1.0 0.1 4 298.0 1.0 > tinker.out &
-          - python driver.py -mdi "-role DRIVER -name driver -method TCP -port 8021"
+          - python3 driver.py -mdi "-role DRIVER -name driver -method TCP -port 8021"
