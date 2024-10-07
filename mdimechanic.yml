@@ -10,6 +10,8 @@ docker:
     - git clone https://github.com/MolSSI-MDI/MDI_Library.git
     - cd MDI_Library
     - pip3 install .
+    - echo "umask 000" >> ~/.profile
+    - echo "umask 000" >> ~/.bashrc
 
   build_engine:
     - |

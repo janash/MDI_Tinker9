@@ -9,6 +9,7 @@ RUN apt-get update -y && \
         wget \
         git \
         gfortran \
+        vim \
         libmpich-dev && \
     rm -rf /tmp/* /var/tmp/* /var/lib/apt/lists/*
 
