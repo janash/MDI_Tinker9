@@ -1,0 +1,13 @@
+// Node Report
+digraph {
+	"@DEFAULT" [label="@DEFAULT" margin=0.1 shape=box]
+	"@INIT_MD" [label="@INIT_MD" margin=0.1 shape=box]
+	"@INIT_MD_" [label="@COORDS
+@FORCES" margin=0.1 shape=box]
+	"@_" [label="@INIT_MD
+@COORDS
+@FORCES" margin=0.1 shape=box]
+	"@DEFAULT" -> "@INIT_MD"
+	"@" -> "@_"
+	"@INIT_MD" -> "@INIT_MD_"
+}
