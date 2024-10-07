@@ -8,7 +8,8 @@ RUN apt-get update -y && \
     apt-get install -y --no-install-recommends \
         wget \
         git \
-        gfortran && \
+        gfortran \
+        libmpich-dev && \
     rm -rf /tmp/* /var/tmp/* /var/lib/apt/lists/*
 
 RUN apt-get remove --purge --auto-remove cmake -y && \
