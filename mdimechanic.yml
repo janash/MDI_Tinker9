@@ -56,3 +56,11 @@ run_scripts:
           - cd /repo/tests/water
           - /repo/build/tinker9/build/dynamic9 tinker.xyz /repo/build/tinker9/params/amoebabio09.prm -k tinker.key -mdi "-role ENGINE -name Tinker9 -method TCP -port 8021 -hostname localhost" 100 1.0 0.1 4 298.0 1.0 > tinker.out &
           - python3 driver.py -mdi "-role DRIVER -name driver -method TCP -port 8021"
+
+  driver_mpi:
+    containers:
+      container1:
+        image: 'mdi/tinker9:dev'
+        script:
+          - cd /repo/tests/water
+          - mpirun -n 1 /repo/build/tinker9/build/dynamic9 tinker.xyz /repo/build/tinker9/params/amoebabio09.prm -k tinker.key -mdi "-role ENGINE -name Tinker9 -method MPI" 100 1.0 0.1 4 298.0 1.0 ':' python3 driver.py -mdi "-role DRIVER -name driver -method MPI"
