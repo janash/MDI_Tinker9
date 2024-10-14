@@ -5,11 +5,11 @@ docker:
     type: 'nvidia'
 
   build_image:
-    - pip3 install setuptools
-    - pip3 install packaging
-    - git clone https://github.com/MolSSI-MDI/MDI_Library.git
-    - cd MDI_Library
-    - pip3 install .
+    #- pip3 install setuptools
+    #- pip3 install packaging
+    #- git clone https://github.com/MolSSI-MDI/MDI_Library.git
+    #- cd MDI_Library
+    #- pip3 install .
     - echo "umask 000" >> ~/.profile
     - echo "umask 000" >> ~/.bashrc
 
@@ -20,7 +20,7 @@ docker:
       fi
     - mkdir -p /repo/build/tinker9/build
     - cd /repo/build/tinker9/build
-    - FC=gfortran compute_capability=86 gpu_lang=CUDA cmake -DMDI=ON ..
+    - FC=gfortran compute_capability=70 gpu_lang=CUDA cmake -DMDI=ON ..
     - make VERBOSE=1
     #- make test
 

@@ -2,7 +2,9 @@
 # Docker file for an MDI engine
 #------------------------------------------------------------#
 
-FROM nvidia/cuda:12.1.0-devel-ubuntu18.04
+FROM nvidia/cuda:12.6.1-devel-ubuntu22.04
+
+ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get update -y && \
     apt-get install -y \
@@ -10,6 +12,7 @@ RUN apt-get update -y && \
         git \
         gfortran \
         vim \
+        cmake \
         libmpich-dev && \
     rm -rf /tmp/* /var/tmp/* /var/lib/apt/lists/*
 
