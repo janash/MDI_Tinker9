@@ -18,4 +18,16 @@ I ran a "vanilla" Tinker 9 calculation with `mdimechanic run --name water`. The 
 
 I removed the files that were produced: `rm tests/water/tinker.arc tests/water/tinker.dyn tests/water/tinker.out`.
 
-I ran a Tinker 9 calculation with the minimal driver by using `mdimechanic run --name driver`.
+I ran a Tinker 9 calculation with the minimal driver by using `mdimechanic run --name driver`. 
+
+* The file `tinker.out` was produced in `tests/water`
+* Kinetic energy for the expected number of steps for the driver (20) was printed to the screen.
+* `tinker.arc` and `tinker.dyn` were not produced.
+* `tinker.out` ended abruptly:
+```
+Received command: >VELOCITIES
+Received command: @COORDS
+The integrator is on step: 14
+Received command: <COORDS
+Receiv
+```
