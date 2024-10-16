@@ -1,0 +1,175 @@
+Intializing MDI
+Accepting MDI communicator
+
+     ######################################################################    
+   ##########################################################################  
+  ###                                                                      ### 
+ ###            Tinker9  --  Software Tools for Molecular Design            ###
+ ##                                                                          ##
+ ##                       Version 1.4.0  February 2023                       ##
+ ##                                                                          ##
+ ##                 Copyright (c)  Zhi Wang & the Ponder Lab                 ##
+ ###                           All Rights Reserved                          ###
+  ###                                                                      ### 
+   ##########################################################################  
+     ######################################################################    
+
+ Compiled at:  14:30:38  Oct 16 2024
+ Commit Date:  Mon Oct 7 14:45:06 2024 +0000
+ Commit:       b7fd412d
+
+
+ GPU Device :  Setting Device ID to 0 from GPU utilization
+
+ Bussi Thermostat
+ Temperature               298.0 Kelvin
+ Tau-Temperature           0.200 ps
+
+ Monte Carlo Barostat
+ Volume Move               100.0 Ang**3
+ Pressure                  1.000 Atm
+ Tau-Pressure              2.000 ps
+ Volume Trial                 25
+ Isotropic Fluctuation
+
+ NRespa                        1
+
+ Molecular Dynamics Trajectory via Velocity Verlet Algorithm
+Calling run_mdi
+Received command: <@
+Received command: @INIT_MD
+Received command: <NATOMS
+Received command: @COORDS
+The integrator is on step: 1
+Received command: <COORDS
+Received command: >COORDS
+Received command: @FORCES
+Received command: <KE
+Received command: <FORCES
+Received command: >FORCES
+Received command: <VELOCITIES
+Received command: >VELOCITIES
+Received command: @COORDS
+The integrator is on step: 2
+Received command: <COORDS
+Received command: >COORDS
+Received command: @FORCES
+Received command: <KE
+Received command: <FORCES
+Received command: >FORCES
+Received command: <VELOCITIES
+Received command: >VELOCITIES
+Received command: @COORDS
+The integrator is on step: 3
+Received command: <COORDS
+Received command: >COORDS
+Received command: @FORCES
+Received command: <KE
+Received command: <FORCES
+Received command: >FORCES
+Received command: <VELOCITIES
+Received command: >VELOCITIES
+Received command: @COORDS
+The integrator is on step: 4
+Received command: <COORDS
+Received command: >COORDS
+Received command: @FORCES
+Received command: <KE
+Received command: <FORCES
+Received command: >FORCES
+Received command: <VELOCITIES
+Received command: >VELOCITIES
+Received command: @COORDS
+The integrator is on step: 5
+Received command: <COORDS
+Received command: >COORDS
+Received command: @FORCES
+Received command: <KE
+Received command: <FORCES
+Received command: >FORCES
+Received command: <VELOCITIES
+Received command: >VELOCITIES
+Received command: @COORDS
+The integrator is on step: 6
+Received command: <COORDS
+Received command: >COORDS
+Received command: @FORCES
+Received command: <KE
+Received command: <FORCES
+Received command: >FORCES
+Received command: <VELOCITIES
+Received command: >VELOCITIES
+Received command: @COORDS
+The integrator is on step: 7
+Received command: <COORDS
+Received command: >COORDS
+Received command: @FORCES
+Received command: <KE
+Received command: <FORCES
+Received command: >FORCES
+Received command: <VELOCITIES
+Received command: >VELOCITIES
+Received command: @COORDS
+The integrator is on step: 8
+Received command: <COORDS
+Received command: >COORDS
+Received command: @FORCES
+Received command: <KE
+Received command: <FORCES
+Received command: >FORCES
+Received command: <VELOCITIES
+Received command: >VELOCITIES
+Received command: @COORDS
+The integrator is on step: 9
+Received command: <COORDS
+Received command: >COORDS
+Received command: @FORCES
+Received command: <KE
+Received command: <FORCES
+Received command: >FORCES
+Received command: <VELOCITIES
+Received command: >VELOCITIES
+Received command: @COORDS
+The integrator is on step: 10
+Received command: <COORDS
+Received command: >COORDS
+Received command: @FORCES
+Received command: <KE
+Received command: <FORCES
+Received command: >FORCES
+Received command: <VELOCITIES
+Received command: >VELOCITIES
+Received command: @COORDS
+The integrator is on step: 11
+Received command: <COORDS
+Received command: >COORDS
+Received command: @FORCES
+Received command: <KE
+Received command: <FORCES
+Received command: >FORCES
+Received command: <VELOCITIES
+Received command: >VELOCITIES
+Received command: @COORDS
+The integrator is on step: 12
+Received command: <COORDS
+Received command: >COORDS
+Received command: @FORCES
+Received command: <KE
+Received command: <FORCES
+Received command: >FORCES
+Received command: <VELOCITIES
+Received command: >VELOCITIES
+Received command: @COORDS
+The integrator is on step: 13
+Received command: <COORDS
+Received command: >COORDS
+Received command: @FORCES
+Received command: <KE
+Received command: <FORCES
+Received command: >FORCES
+Received command: <VELOCITIES
+Received command: >VELOCITIES
+Received command: @COORDS
+The integrator is on step: 14
+Received command: <COORDS
+Receiv
