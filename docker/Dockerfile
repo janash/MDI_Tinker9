@@ -2,7 +2,7 @@
 # Docker file for an MDI engine
 #------------------------------------------------------------#
 
-FROM nvidia/cuda:12.6.1-devel-ubuntu22.04
+FROM nvidia/cuda:12.3.1-devel-ubuntu22.04
 
 ENV DEBIAN_FRONTEND noninteractive
 
